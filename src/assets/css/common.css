@@ -1,0 +1,215 @@
+/* Variables */
+
+:root {
+  --background-color: #eee;
+  --text-color: black;
+  --faint-text-color: gray;
+  --highlight-color: #00a936;
+  --transparent-gray: #b7b7b780;
+  --content-background-color: #fff;
+
+  --font-small: 0.5rem;
+  --font-regular: 1rem;
+  --font-large: 1.5rem;
+  --font-huge: 2rem;
+  --body-font: "Plex Regular", sans-serif;
+  --heading-font: "Plex Regular", sans-serif;
+}
+
+[data-theme="dark"] {
+  --background-color: #252525;
+  --text-color: white;
+  --highlight-color: #00cf42;
+  --transparent-gray: #80808080;
+  --content-background-color: #333;
+}
+
+
+/* Font */
+
+@font-face {
+  font-family: "Plex Regular";
+  src: url("../IBM Plex/IBMPlexSans-Regular.ttf");
+  font-weight: normal;
+  font-style: normal
+}
+
+@font-face {
+  font-family: "Plex Regular";
+  src: url("../IBM Plex/IBMPlexSans-Bold.ttf");
+  font-weight: bold;
+  font-style: normal
+}
+
+@font-face {
+  font-family: "Plex Regular";
+  src: url("../IBM Plex/IBMPlexSans-BoldItalic.ttf");
+  font-weight: bold;
+  font-style: italic
+}
+
+@font-face {
+  font-family: "Plex Regular";
+  src: url("../IBM Plex/IBMPlexSans-Italic.ttf");
+  font-weight: normal;
+  font-style: italic
+}
+
+
+/* Universal */
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  font-size: var(--font-regular);
+  font-family: var(--body-font);
+}
+
+/* Links */
+
+a {
+  text-decoration: none;
+  border-bottom: 0.1em dashed;
+  color: var(--highlight-color);
+  position: relative;
+}
+
+a:hover {
+  border-bottom-style: solid;
+}
+
+
+/* Images */
+
+img {
+  display: block;
+  margin-inline: auto;
+  border-radius: 0.5rem;
+  width: 20rem;
+  height: 20rem;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+/* Lists */
+
+li {
+  margin-block: 0.25em;
+}
+
+
+/* Content */
+
+.content-box {
+  background-color: var(--content-background-color);
+  width: clamp(23rem, 50%, 50rem);
+  margin: 0.5rem auto 1rem auto;
+  border-radius: 1rem;
+  overflow: hidden;
+  padding: 1em;
+  border-bottom: 0.2rem solid var(--highlight-color);
+}
+
+/* Resource pack info */
+
+.resource-pack {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.resource-pack {
+  width: auto;
+}
+
+.resource-pack *:first-child * {
+  margin: 0;
+}
+
+.resource-pack *:first-child *:nth-child(2) {
+  font-size: var(--font-large);
+  color: var(--faint-text-color);
+}
+
+.resource-pack *:first-child *:first-child {
+  font-size: var(--font-huge);
+  font-family: var(--heading-font);
+  font-weight: bold;
+}
+
+.resource-pack img {
+  margin-inline: 0;
+  width: 5rem;
+  height: 5rem;
+}
+
+.files {
+  padding-left: 1rem;
+  margin-bottom: 0;
+}
+
+.files li {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.files li * {
+  margin: 0;
+}
+
+.files li p span {
+  color: var(--faint-text-color);
+}
+
+.files img {
+  width: 2em;
+  height: 2em;
+}
+
+/* Header */
+
+header {
+  background-color: var(--content-background-color);
+  font-size: var(--font-huge);
+  font-family: var(--heading-font);
+  font-weight: bold;
+  color: var(--text-color);
+  padding: 1rem;
+  padding-top: .5rem;
+  margin-bottom: 1rem;
+  border-bottom: 0.2rem solid var(--highlight-color);
+}
+
+.version {
+  font-weight: normal;
+  color: var(--faint-text-color);
+}
+
+/* Site info */
+
+.meta {
+  width: 100%;
+}
+
+.meta ul {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  color: var(--faint-text-color);
+  padding: 0;
+}
+
+.meta li {
+  display: block;
+}
+
+.meta li~li::before {
+  content: "•";
+  margin: 1em;
+}
