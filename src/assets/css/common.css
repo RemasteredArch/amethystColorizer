@@ -175,6 +175,10 @@ li {
 /* Header */
 
 header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   background-color: var(--content-background-color);
   font-size: var(--font-huge);
   font-family: var(--heading-font);
@@ -212,4 +216,33 @@ header {
 .meta li~li::before {
   content: "•";
   margin: 1em;
+}
+
+/* file upload */
+
+.small-content-box {
+  width: fit-content;
+  margin: 0.5rem 0.5rem 1rem 0;
+  border-radius: 1rem;
+  overflow: hidden;
+  padding: 1em;
+  border-bottom: 0.2rem solid var(--highlight-color);
+}
+
+.file-upload span {
+  margin-left: 0.5rem;
+}
+
+.upload-pack {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.start-button {
+  font-size: var(--heading-font);
+}
+
+.log {
+  background-color: var(--background-color);
 }

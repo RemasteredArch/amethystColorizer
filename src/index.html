@@ -20,7 +20,13 @@
 <body>
 
   <header>
-    Amethyst Colorizer &nbsp;<span class="version">v0.1</span>
+    <div>
+      Amethyst Colorizer &nbsp;<span class="version">v0.1</span>
+    </div>
+
+    <div class="settings">
+      ⚙️
+    </div>
   </header>
 
   <main>
@@ -53,8 +59,27 @@
       </ul>
     </section>
 
-    <section class="content-box">
-      <p>Site under construction...</p>
+    <section class="content-box ">
+      <h1>Upload resource pack</h1>
+
+      <div class="upload-pack">
+        <div class="small-content-box file-upload">
+          <button>Upload File</button>
+          <span>filename.zip</span>
+        </div>
+
+        <div class="small-content-box">
+          <button disabled class="start-button">Start</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-box processing-pack">
+      <h1>Processing pack...</h1>
+
+      <div class="small-content-box log">
+        <p>Something happening...</p>
+      </div>
     </section>
 
   </main>
